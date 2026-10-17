@@ -4,7 +4,7 @@ import re
 import uuid
 
 from fastapi.responses import StreamingResponse
-from emergentintegrations.llm.chat import LlmChat, UserMessage, TextDelta, StreamDone
+from emergentintegrations.llm.chat import ImageContent, LlmChat, UserMessage, TextDelta, StreamDone
 
 PROVIDER, MODEL = "anthropic", "claude-sonnet-5-5"
 
@@ -28,17 +28,25 @@ def _chat(system: str, history: list | None = None) -> LlmChat:
     ).with_model(PROVIDER, MODEL)
 
 
-async def stream_text(system: str, prompt: str, history: list | None = None):
+async def stream_text(system: str, prompt: str, history: list | None = None, images: list[str] | None = None):
     chat = _chat(system, history)
-    async for ev in chat.stream_message(UserMessage(text=prompt)):
+    msg = UserMessage(text=prompt, file_contents=[ImageContent(b) for b in images or []])
+    async for ev in chat.stream_message(msg):
         if isinstance(ev, TextDelta):
             yield ev.content
         elif isinstance(ev, StreamDone):
             break
 
 
-async def complete(system: str, prompt: str) -> str:
-    return "".join([c async for c in stream_text(system, prompt)])
+async def complete(system: str, prompt: str, images: list[str] | None = None) -> str:
+    return "".join([c async for c in stream_text(system, prompt, images=images)])
+
+
+OCR_PROMPT = (
+    "Transcreva fielmente todo o texto desta foto de material de estudo (apostila, caderno, livro), em português, "
+    "mantendo títulos, listas e fórmulas. Se houver diagramas, descreva-os em uma linha entre colchetes. "
+    "Responda só com a transcrição. Se não houver texto legível, responda exatamente: SEM_TEXTO"
+)
 
 
 def sse_response(gen):

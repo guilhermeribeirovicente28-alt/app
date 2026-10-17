@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import { AuthProvider, useAuth } from "@/context/AuthContext";
 import Layout from "@/components/Layout";
@@ -13,6 +13,8 @@ import Tools from "@/pages/Tools";
 import ToolPage from "@/pages/ToolPage";
 import Plano from "@/pages/Plano";
 import Progresso from "@/pages/Progresso";
+
+const Router = window.location.protocol === "file:" ? HashRouter : BrowserRouter;
 
 const Loading = () => (
   <div className="min-h-screen flex items-center justify-center bg-[#0f151b]" data-testid="app-loading">
@@ -41,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <BrowserRouter>
+        <Router>
           <Routes>
             <Route path="/entrar" element={<PublicOnly><AuthPage /></PublicOnly>} />
             <Route element={<Protected><Layout /></Protected>}>
@@ -56,7 +58,7 @@ function App() {
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
         <Toaster theme="dark" position="top-center" richColors />
       </AuthProvider>
     </div>

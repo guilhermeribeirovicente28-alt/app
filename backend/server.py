@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / ".env")
 
+import base64
+import io
 import json
 import logging
 import os
@@ -12,7 +14,9 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from typing import List, Optional
 
-from fastapi import APIRouter, Depends, FastAPI, HTTPException, Request
+from fastapi import APIRouter, Depends, FastAPI, File, HTTPException, Request, UploadFile
+from pypdf import PdfReader
+from pypdf.errors import PdfReadError
 from pydantic import BaseModel, EmailStr, Field
 from starlette.middleware.cors import CORSMiddleware
 
@@ -431,6 +435,47 @@ async def ai_material(body: MaterialIn, user: User = Depends(get_current_user)):
     instr = MATERIAL_MODES.get(body.mode, MATERIAL_MODES["resumo"])
     prompt = f"{instr}\nAdapte ao nível '{user.grade}'. Use só o conteúdo do material abaixo.\n\n---\n{body.text}\n---"
     return ai.sse_response(ai.stream_text(ai.TUTOR_SYSTEM, prompt))
+
+
+MAX_UPLOAD = 10 * 1024 * 1024
+IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
+
+
+def pdf_text(data: bytes) -> tuple[str, int]:
+    try:
+        reader = PdfReader(io.BytesIO(data))
+        pages = reader.pages[:40]
+        text = "\n\n".join((p.extract_text() or "").strip() for p in pages)
+    except (PdfReadError, ValueError, KeyError) as e:
+        raise HTTPException(status_code=400, detail="Não consegui ler este PDF. Ele pode estar protegido ou corrompido.") from e
+    return text.strip(), len(reader.pages)
+
+
+@api.post("/ai/extract")
+async def ai_extract(file: UploadFile = File(...), user: User = Depends(get_current_user)):
+    data = await file.read()
+    if len(data) > MAX_UPLOAD:
+        raise HTTPException(status_code=413, detail="Arquivo maior que 10 MB.")
+    name = (file.filename or "").lower()
+    ctype = file.content_type or ""
+    if ctype == "application/pdf" or name.endswith(".pdf"):
+        text, pages = pdf_text(data)
+        if len(text) < 20:
+            raise HTTPException(status_code=422, detail="Este PDF parece ser escaneado (só imagem). Tire fotos das páginas e envie como foto.")
+        return {"text": text[:30000], "kind": "pdf", "pages": pages, "truncated": len(text) > 30000 or pages > 40}
+    if ctype in IMAGE_TYPES or name.endswith((".jpg", ".jpeg", ".png", ".webp")):
+        try:
+            text = (await ai.complete("Você transcreve materiais de estudo.", ai.OCR_PROMPT,
+                                      images=[base64.b64encode(data).decode()])).strip()
+        except Exception as e:
+            logger.exception("image transcription failed")
+            raise HTTPException(status_code=502, detail="A IA não conseguiu ler a foto agora. Tente de novo.") from e
+        if not text or text == "SEM_TEXTO":
+            raise HTTPException(status_code=422, detail="Não encontrei texto legível na foto. Tente uma foto mais nítida e reta.")
+        return {"text": text[:30000], "kind": "image", "pages": 1, "truncated": len(text) > 30000}
+    if name.endswith((".txt", ".md")) or ctype.startswith("text/"):
+        return {"text": data.decode("utf-8", errors="ignore")[:30000], "kind": "text", "pages": 1, "truncated": len(data) > 30000}
+    raise HTTPException(status_code=415, detail="Formato não suportado. Envie PDF, foto (JPG, PNG, WEBP) ou .txt.")
 
 
 @api.post("/ai/questions")

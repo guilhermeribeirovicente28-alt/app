@@ -4,7 +4,7 @@ import { ArrowUpRight, BookOpen, Factory, FileText, PenLine, ScanSearch, Search,
 export const TOOLS = [
   { id: "aprender", n: "Aprender", d: "Explicação no seu nível, com exemplo resolvido e mini exercício.", icon: BookOpen, ai: true },
   { id: "gerar", n: "Gerar questões com IA", d: "Questões inéditas por matéria, assunto, série e dificuldade.", icon: Sparkles, ai: true },
-  { id: "upload", n: "Upload de material", d: "Transforme seu texto em resumo, flashcards, mapa mental ou desafio.", icon: FileText, ai: true },
+  { id: "upload", n: "Upload de material", d: "Envie PDF, foto da apostila ou texto e receba resumo, flashcards, mapa mental ou desafio.", icon: FileText, ai: true },
   { id: "fabricante", n: "Fabricante de Provas", d: "Monte uma prova por assunto e dificuldade e faça como simulado.", icon: Factory, ai: true },
   { id: "raiox", n: "Raio-X", d: "Descubra por que cada alternativa tentou te derrubar.", icon: ScanSearch },
   { id: "pegadinha", n: "Caça à Pegadinha", d: "Encontre comandos negativos, generalizações e palavras traiçoeiras.", icon: Search },
