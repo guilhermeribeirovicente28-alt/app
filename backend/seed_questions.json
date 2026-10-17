@@ -1,0 +1,1129 @@
+[
+ {
+  "seed_key": "q1",
+  "subj": "Biologia",
+  "grade": "1º EM",
+  "topic": "Citologia",
+  "level": 2,
+  "prompt": "Qual organela celular é a principal responsável pela respiração celular, produzindo ATP?",
+  "opts": [
+   "Ribossomo",
+   "Lisossomo",
+   "Complexo golgiense",
+   "Mitocôndria"
+  ],
+  "ans": 3,
+  "err": [
+   "conc",
+   "conc",
+   "conc",
+   null
+  ],
+  "hint": "Pense na \"usina de energia\" da célula.",
+  "why": "A mitocôndria realiza a respiração celular e produz a maior parte do ATP. O ribossomo produz proteínas, o lisossomo digere e o complexo golgiense empacota substâncias."
+ },
+ {
+  "seed_key": "q2",
+  "subj": "Matemática",
+  "grade": "6º ano",
+  "topic": "Frações",
+  "level": 1,
+  "prompt": "Quanto é 3/4 + 1/8?",
+  "opts": [
+   "4/12",
+   "7/8",
+   "4/8",
+   "3/32"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "distr",
+   "calc"
+  ],
+  "hint": "Deixe as duas frações com o mesmo denominador.",
+  "why": "3/4 = 6/8, e 6/8 + 1/8 = 7/8. Somar numerador com numerador e denominador com denominador (4/12) é um erro de conceito."
+ },
+ {
+  "seed_key": "q3",
+  "subj": "Matemática",
+  "grade": "7º ano",
+  "topic": "Equações",
+  "level": 2,
+  "prompt": "Resolva: 2x + 5 = 17.",
+  "opts": [
+   "x = 6",
+   "x = 12",
+   "x = 11",
+   "x = 22"
+  ],
+  "ans": 0,
+  "err": [
+   null,
+   "distr",
+   "calc",
+   "conc"
+  ],
+  "hint": "Isole o 2x primeiro, depois divida.",
+  "why": "2x = 17 − 5 = 12, então x = 6. Parar em 12 é esquecer a divisão final."
+ },
+ {
+  "seed_key": "q4",
+  "subj": "Matemática",
+  "grade": "9º ano",
+  "topic": "Equação do 2º grau",
+  "level": 3,
+  "prompt": "Quais são as raízes de x² − 5x + 6 = 0?",
+  "opts": [
+   "−2 e −3",
+   "2 e 3",
+   "1 e 6",
+   "5 e 6"
+  ],
+  "ans": 1,
+  "err": [
+   "calc",
+   null,
+   "conc",
+   "interp"
+  ],
+  "hint": "Procure dois números com soma 5 e produto 6.",
+  "why": "Soma 5 e produto 6 dão 2 e 3. Na forma ax² + bx + c, a soma das raízes é −b/a."
+ },
+ {
+  "seed_key": "q5",
+  "subj": "Português",
+  "grade": "ENEM",
+  "topic": "Orações subordinadas",
+  "level": 2,
+  "prompt": "Em \"Embora estivesse cansado, continuou estudando\", a conjunção \"embora\" expressa ideia de:",
+  "opts": [
+   "causa",
+   "concessão",
+   "condição",
+   "conclusão"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "distr"
+  ],
+  "hint": "Há um fato que seria obstáculo, mas não impede a ação.",
+  "why": "\"Embora\" introduz um obstáculo que não impediu o resultado. Isso é concessão."
+ },
+ {
+  "seed_key": "q6",
+  "subj": "Física",
+  "grade": "1º EM",
+  "topic": "Cinemática",
+  "level": 2,
+  "prompt": "Um carro viaja a 90 km/h. Qual é essa velocidade em m/s?",
+  "opts": [
+   "324 m/s",
+   "25 m/s",
+   "30 m/s",
+   "9 m/s"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "calc",
+   "distr"
+  ],
+  "hint": "Para converter km/h em m/s, divida por 3,6.",
+  "why": "90 ÷ 3,6 = 25 m/s. Multiplicar por 3,6 (324) é usar a conversão ao contrário."
+ },
+ {
+  "seed_key": "q7",
+  "subj": "História",
+  "grade": "8º ano",
+  "topic": "Revolução Francesa",
+  "level": 1,
+  "prompt": "Em que ano ocorreu a Queda da Bastilha, marco inicial da Revolução Francesa?",
+  "opts": [
+   "1776",
+   "1789",
+   "1822",
+   "1889"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "distr"
+  ],
+  "hint": "Fim do século XVIII.",
+  "why": "A Bastilha caiu em 14 de julho de 1789. 1889 é o ano da Proclamação da República no Brasil."
+ },
+ {
+  "seed_key": "q8",
+  "subj": "Geografia",
+  "grade": "6º ano",
+  "topic": "Coordenadas",
+  "level": 1,
+  "prompt": "A Linha do Equador divide a Terra em quais hemisférios?",
+  "opts": [
+   "Norte e Sul",
+   "Leste e Oeste",
+   "Oriental e Ocidental",
+   "Leste e Sul"
+  ],
+  "ans": 0,
+  "err": [
+   null,
+   "conc",
+   "conc",
+   "distr"
+  ],
+  "hint": "O Equador é uma linha horizontal.",
+  "why": "O Equador separa Norte e Sul. A divisão Leste/Oeste (Oriental/Ocidental) é feita pelo meridiano de Greenwich."
+ },
+ {
+  "seed_key": "q9",
+  "subj": "Química",
+  "grade": "2º EM",
+  "topic": "Soluções",
+  "level": 2,
+  "prompt": "Qual a concentração, em mol/L, de uma solução com 0,5 mol de NaCl dissolvidos em 2 L?",
+  "opts": [
+   "1 mol/L",
+   "0,25 mol/L",
+   "0,5 mol/L",
+   "4 mol/L"
+  ],
+  "ans": 1,
+  "err": [
+   "calc",
+   null,
+   "distr",
+   "calc"
+  ],
+  "hint": "M = n ÷ V.",
+  "why": "M = 0,5 ÷ 2 = 0,25 mol/L. Responder 0,5 é ignorar o volume."
+ },
+ {
+  "seed_key": "q10",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Porcentagem",
+  "level": 2,
+  "prompt": "Um produto de R$ 200 recebe desconto de 20% e, depois, aumento de 20% sobre o novo preço. Qual o preço final?",
+  "opts": [
+   "R$ 200",
+   "R$ 192",
+   "R$ 160",
+   "R$ 240"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "interp",
+   "calc"
+  ],
+  "hint": "Os 20% do aumento incidem sobre R$ 160, não sobre R$ 200.",
+  "why": "200 × 0,8 = 160 e 160 × 1,2 = 192. Desconto e aumento de mesmo percentual não se cancelam."
+ },
+ {
+  "seed_key": "q11",
+  "subj": "Biologia",
+  "grade": "3º EM",
+  "topic": "Genética",
+  "level": 3,
+  "prompt": "No cruzamento Aa × Aa, qual a probabilidade de nascer um filho aa?",
+  "opts": [
+   "1/2",
+   "1/4",
+   "3/4",
+   "1/8"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "interp",
+   "calc"
+  ],
+  "hint": "Monte o quadro de Punnett: AA, Aa, Aa, aa.",
+  "why": "Dos 4 genótipos possíveis, só 1 é aa: 1/4. A chance de 3/4 é a do fenótipo dominante."
+ },
+ {
+  "seed_key": "q12",
+  "subj": "Matemática",
+  "grade": "8º ano",
+  "topic": "Geometria",
+  "level": 1,
+  "prompt": "Qual é a soma dos ângulos internos de um triângulo?",
+  "opts": [
+   "90°",
+   "180°",
+   "270°",
+   "360°"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "distr",
+   "conc"
+  ],
+  "hint": "Vale para qualquer triângulo.",
+  "why": "A soma é sempre 180°. Os 360° são a soma dos ângulos internos de um quadrilátero."
+ },
+ {
+  "seed_key": "q13",
+  "subj": "Matemática",
+  "grade": "1º EM",
+  "topic": "Funções",
+  "level": 2,
+  "prompt": "Dada f(x) = 2x − 3, quanto vale f(4)?",
+  "opts": [
+   "5",
+   "8",
+   "11",
+   "3"
+  ],
+  "ans": 0,
+  "err": [
+   null,
+   "distr",
+   "calc",
+   "interp"
+  ],
+  "hint": "Substitua x por 4 e resolva.",
+  "why": "f(4) = 2·4 − 3 = 5. Responder 8 é esquecer de subtrair 3."
+ },
+ {
+  "seed_key": "e1",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Porcentagem",
+  "level": 1,
+  "prompt": "Uma loja aumentou o preço de um produto de R$ 80 para R$ 100. Qual foi o percentual de aumento?",
+  "opts": [
+   "20%",
+   "25%",
+   "80%",
+   "125%"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "interp",
+   "calc"
+  ],
+  "hint": "Compare o aumento com o preço inicial, não com o final.",
+  "why": "O aumento foi de R$ 20, e 20 ÷ 80 = 0,25 = 25%. Dividir por 100 (20%) usa a base errada."
+ },
+ {
+  "seed_key": "e2",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Regra de três",
+  "level": 1,
+  "prompt": "Uma impressora imprime 120 páginas em 8 minutos. No mesmo ritmo, quantas páginas imprime em 20 minutos?",
+  "opts": [
+   "240",
+   "300",
+   "320",
+   "150"
+  ],
+  "ans": 1,
+  "err": [
+   "calc",
+   null,
+   "distr",
+   "conc"
+  ],
+  "hint": "Descubra quantas páginas ela imprime por minuto.",
+  "why": "120 ÷ 8 = 15 páginas por minuto, e 15 × 20 = 300."
+ },
+ {
+  "seed_key": "e3",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Média",
+  "level": 1,
+  "prompt": "As notas de um aluno em quatro provas foram 6, 7, 8 e 9. Qual é a média?",
+  "opts": [
+   "7",
+   "7,5",
+   "8",
+   "30"
+  ],
+  "ans": 1,
+  "err": [
+   "calc",
+   null,
+   "conc",
+   "distr"
+  ],
+  "hint": "Some tudo e divida pelo número de provas.",
+  "why": "A soma é 30 e 30 ÷ 4 = 7,5. Responder 30 é esquecer de dividir."
+ },
+ {
+  "seed_key": "e4",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Juros simples",
+  "level": 2,
+  "prompt": "Um capital de R$ 1.000 é aplicado a juros simples de 2% ao mês durante 6 meses. Qual é o montante?",
+  "opts": [
+   "R$ 1.120",
+   "R$ 1.126,16",
+   "R$ 120",
+   "R$ 1.200"
+  ],
+  "ans": 0,
+  "err": [
+   null,
+   "conc",
+   "interp",
+   "calc"
+  ],
+  "hint": "Juros simples incidem sempre sobre o capital inicial.",
+  "why": "J = 1.000 × 0,02 × 6 = 120, e o montante é 1.000 + 120 = R$ 1.120. R$ 1.126,16 seria juros compostos e R$ 120 são só os juros."
+ },
+ {
+  "seed_key": "e5",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Perímetro",
+  "level": 1,
+  "prompt": "Um terreno retangular de 12 m por 25 m será cercado com 3 voltas de arame. Quantos metros de arame são necessários?",
+  "opts": [
+   "300",
+   "222",
+   "74",
+   "888"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "interp",
+   "calc"
+  ],
+  "hint": "Cerca mede o contorno, não a superfície.",
+  "why": "O perímetro é 2 × (12 + 25) = 74 m, e 3 voltas dão 222 m. A área (300) não serve para medir cerca."
+ },
+ {
+  "seed_key": "e6",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Probabilidade",
+  "level": 2,
+  "prompt": "Uma urna tem 3 bolas azuis, 5 vermelhas e 2 verdes. Ao retirar uma bola ao acaso, qual é a probabilidade de ela ser vermelha?",
+  "opts": [
+   "3/10",
+   "1/5",
+   "1/2",
+   "5/3"
+  ],
+  "ans": 2,
+  "err": [
+   "distr",
+   "calc",
+   null,
+   "conc"
+  ],
+  "hint": "Probabilidade é casos favoráveis dividido pelo total de casos.",
+  "why": "São 5 vermelhas em 10 bolas: 5/10 = 1/2. A fração 3/10 é a chance de sair azul."
+ },
+ {
+  "seed_key": "e7",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Escala",
+  "level": 2,
+  "prompt": "Em um mapa, 1 cm representa 50 km. Duas cidades estão a 4,5 cm no mapa. Qual é a distância real entre elas?",
+  "opts": [
+   "11,1 km",
+   "225 km",
+   "45 km",
+   "2.250 km"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "distr",
+   "calc"
+  ],
+  "hint": "Multiplique os centímetros do mapa pela escala.",
+  "why": "4,5 × 50 = 225 km. Dividir (50 ÷ 4,5) inverte a relação."
+ },
+ {
+  "seed_key": "e8",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Moda e mediana",
+  "level": 2,
+  "prompt": "As idades 12, 15, 15, 18 e 20 têm moda e mediana iguais, respectivamente, a:",
+  "opts": [
+   "15 e 15",
+   "15 e 16",
+   "18 e 15",
+   "16 e 15"
+  ],
+  "ans": 0,
+  "err": [
+   null,
+   "conc",
+   "distr",
+   "conc"
+  ],
+  "hint": "Moda é o valor que mais se repete. Mediana é o valor central da lista ordenada.",
+  "why": "A moda é 15 (aparece duas vezes) e a mediana é o termo do meio, também 15. O valor 16 é a média, não a mediana."
+ },
+ {
+  "seed_key": "e9",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Função afim",
+  "level": 2,
+  "prompt": "Uma corrida de táxi custa R$ 5 de bandeirada mais R$ 2,50 por km rodado. Quanto custa uma corrida de 12 km?",
+  "opts": [
+   "R$ 30",
+   "R$ 35",
+   "R$ 42,50",
+   "R$ 60"
+  ],
+  "ans": 1,
+  "err": [
+   "distr",
+   null,
+   "calc",
+   "conc"
+  ],
+  "hint": "Não esqueça a parte fixa do preço.",
+  "why": "Custo = 5 + 2,50 × 12 = 5 + 30 = R$ 35. R$ 30 esquece a bandeirada."
+ },
+ {
+  "seed_key": "e10",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Notação científica",
+  "level": 2,
+  "prompt": "A distância da Terra ao Sol é de cerca de 150 milhões de km. Em notação científica, isso é:",
+  "opts": [
+   "1,5 × 10⁷ km",
+   "1,5 × 10⁸ km",
+   "1,5 × 10⁶ km",
+   "1,5 × 10⁹ km"
+  ],
+  "ans": 1,
+  "err": [
+   "calc",
+   null,
+   "distr",
+   "calc"
+  ],
+  "hint": "Conte quantas casas a vírgula anda de 1,5 até 150.000.000.",
+  "why": "150.000.000 = 1,5 × 100.000.000 = 1,5 × 10⁸."
+ },
+ {
+  "seed_key": "e11",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Sistemas",
+  "level": 2,
+  "prompt": "Ana e Beto têm juntos R$ 90. Ana tem o dobro do que Beto tem. Quanto tem Beto?",
+  "opts": [
+   "R$ 15",
+   "R$ 60",
+   "R$ 30",
+   "R$ 45"
+  ],
+  "ans": 2,
+  "err": [
+   "calc",
+   "conc",
+   null,
+   "interp"
+  ],
+  "hint": "Se Beto tem x, Ana tem 2x.",
+  "why": "x + 2x = 90, então 3x = 90 e x = 30. R$ 60 é o valor de Ana."
+ },
+ {
+  "seed_key": "e12",
+  "subj": "Matemática",
+  "grade": "ENEM",
+  "topic": "Teorema de Pitágoras",
+  "level": 2,
+  "prompt": "Uma escada de 5 m está apoiada em uma parede, com a base a 3 m dela. A que altura da parede a escada chega?",
+  "opts": [
+   "2 m",
+   "8 m",
+   "4 m",
+   "5,8 m"
+  ],
+  "ans": 2,
+  "err": [
+   "calc",
+   "distr",
+   null,
+   "conc"
+  ],
+  "hint": "A escada é a hipotenusa do triângulo.",
+  "why": "h² + 3² = 5², então h² = 25 − 9 = 16 e h = 4 m. Somar os quadrados (5,8) é montar o teorema ao contrário."
+ },
+ {
+  "seed_key": "e13",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Interpretação de texto",
+  "level": 1,
+  "prompt": "Leia: “Todo cidadão tem direito à saúde, mas o acesso desigual ainda marca o país.” Pode-se concluir que:",
+  "opts": [
+   "o acesso à saúde já é igual para todos",
+   "o direito existe, mas o acesso ainda é desigual",
+   "não há direito à saúde no país",
+   "a desigualdade já foi eliminada"
+  ],
+  "ans": 1,
+  "err": [
+   "interp",
+   null,
+   "interp",
+   "distr"
+  ],
+  "hint": "Observe o que a palavra “mas” opõe.",
+  "why": "A frase reconhece o direito e, com “mas”, aponta que o acesso ainda é desigual."
+ },
+ {
+  "seed_key": "e14",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Figuras de linguagem",
+  "level": 1,
+  "prompt": "Em “Seus olhos são dois oceanos”, há uma:",
+  "opts": [
+   "comparação",
+   "ironia",
+   "metáfora",
+   "hipérbole"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "conc",
+   null,
+   "conc"
+  ],
+  "hint": "Há alguma palavra como “como” ligando as duas ideias?",
+  "why": "Sem conectivo comparativo, a identificação direta entre olhos e oceanos é metáfora."
+ },
+ {
+  "seed_key": "e15",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Concordância verbal",
+  "level": 2,
+  "prompt": "Assinale a frase com a concordância correta:",
+  "opts": [
+   "Fazem dois anos que moro aqui.",
+   "Faz dois anos que moro aqui.",
+   "Houveram problemas na prova.",
+   "Haviam muitos alunos na sala."
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "conc"
+  ],
+  "hint": "Pense nos verbos impessoais.",
+  "why": "Fazer (tempo decorrido) e haver (existir) ficam no singular: “Faz dois anos”, “Houve problemas”, “Havia muitos alunos”."
+ },
+ {
+  "seed_key": "e16",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Crase",
+  "level": 2,
+  "prompt": "Assinale a alternativa em que o uso da crase está correto:",
+  "opts": [
+   "Vou à pé para casa.",
+   "Fui à escola ontem.",
+   "Entreguei o livro à ele.",
+   "Ela começou à estudar."
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "conc"
+  ],
+  "hint": "A crase junta a preposição “a” com o artigo “a”.",
+  "why": "“Ir a + a escola” gera crase. Ela não ocorre antes de palavras masculinas, pronomes pessoais ou verbos."
+ },
+ {
+  "seed_key": "e17",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Funções da linguagem",
+  "level": 1,
+  "prompt": "No anúncio “Compre hoje e economize!”, predomina a função:",
+  "opts": [
+   "referencial",
+   "emotiva",
+   "conativa",
+   "poética"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "conc",
+   null,
+   "conc"
+  ],
+  "hint": "O texto quer que o leitor faça algo.",
+  "why": "A função conativa (ou apelativa) busca convencer o receptor e usa verbos no imperativo."
+ },
+ {
+  "seed_key": "e18",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Gêneros textuais",
+  "level": 1,
+  "prompt": "Uma notícia de jornal tem como característica principal:",
+  "opts": [
+   "linguagem objetiva, que informa fatos",
+   "opinião pessoal do autor",
+   "versos e rimas",
+   "diálogo entre personagens"
+  ],
+  "ans": 0,
+  "err": [
+   null,
+   "conc",
+   "conc",
+   "conc"
+  ],
+  "hint": "Pense no objetivo da notícia: informar.",
+  "why": "A notícia relata fatos de forma objetiva. A opinião do autor é característica do editorial e do artigo de opinião."
+ },
+ {
+  "seed_key": "e19",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Leitura de enunciado",
+  "level": 1,
+  "prompt": "O enunciado diz: “Assinale a alternativa que NÃO apresenta ideia de oposição.” O aluno deve marcar a alternativa:",
+  "opts": [
+   "que apresenta oposição",
+   "que não apresenta oposição",
+   "qualquer uma",
+   "a primeira"
+  ],
+  "ans": 1,
+  "err": [
+   "interp",
+   null,
+   "distr",
+   "distr"
+  ],
+  "hint": "Sublinhe a palavra NÃO antes de olhar as alternativas.",
+  "why": "O comando é negativo: a resposta é a única que fica fora do grupo “oposição”."
+ },
+ {
+  "seed_key": "e20",
+  "subj": "Linguagens",
+  "grade": "ENEM",
+  "topic": "Conjunções",
+  "level": 2,
+  "prompt": "Em “Os alunos estudaram bastante, portanto passaram”, a conjunção “portanto” indica:",
+  "opts": [
+   "oposição",
+   "explicação",
+   "conclusão",
+   "adição"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "conc",
+   null,
+   "conc"
+  ],
+  "hint": "O que vem depois é consequência do que veio antes?",
+  "why": "“Portanto” introduz a conclusão, ou consequência, do que foi dito antes."
+ },
+ {
+  "seed_key": "e21",
+  "subj": "Física",
+  "grade": "ENEM",
+  "topic": "Velocidade média",
+  "level": 1,
+  "prompt": "Um ciclista percorre 36 km em 1,5 h, em velocidade constante. Qual é a sua velocidade?",
+  "opts": [
+   "54 km/h",
+   "24 km/h",
+   "36 km/h",
+   "27 km/h"
+  ],
+  "ans": 1,
+  "err": [
+   "calc",
+   null,
+   "distr",
+   "calc"
+  ],
+  "hint": "v = distância ÷ tempo.",
+  "why": "36 ÷ 1,5 = 24 km/h. Multiplicar (54) inverte a operação."
+ },
+ {
+  "seed_key": "e22",
+  "subj": "Física",
+  "grade": "ENEM",
+  "topic": "Lei de Ohm",
+  "level": 2,
+  "prompt": "Um resistor de 10 Ω é ligado a uma tensão de 20 V. Qual é a corrente elétrica?",
+  "opts": [
+   "0,5 A",
+   "200 A",
+   "2 A",
+   "30 A"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "calc",
+   null,
+   "distr"
+  ],
+  "hint": "U = R · i.",
+  "why": "i = U ÷ R = 20 ÷ 10 = 2 A. Dividir ao contrário (R ÷ U) dá 0,5."
+ },
+ {
+  "seed_key": "e23",
+  "subj": "Física",
+  "grade": "ENEM",
+  "topic": "Energia elétrica",
+  "level": 2,
+  "prompt": "Um chuveiro de 5.000 W fica ligado por 30 minutos. Quantos kWh ele consome?",
+  "opts": [
+   "5 kWh",
+   "150 kWh",
+   "0,5 kWh",
+   "2,5 kWh"
+  ],
+  "ans": 3,
+  "err": [
+   "distr",
+   "calc",
+   "conc",
+   null
+  ],
+  "hint": "Converta watts para quilowatts e minutos para horas.",
+  "why": "5.000 W = 5 kW e 30 min = 0,5 h. A energia é 5 × 0,5 = 2,5 kWh."
+ },
+ {
+  "seed_key": "e24",
+  "subj": "Química",
+  "grade": "ENEM",
+  "topic": "Estequiometria",
+  "level": 2,
+  "prompt": "Na reação 2 H₂ + O₂ → 2 H₂O, quantos mols de H₂O se formam a partir de 4 mols de H₂?",
+  "opts": [
+   "2",
+   "4",
+   "8",
+   "1"
+  ],
+  "ans": 1,
+  "err": [
+   "calc",
+   null,
+   "conc",
+   "distr"
+  ],
+  "hint": "Veja a proporção entre H₂ e H₂O na equação.",
+  "why": "A proporção é 2 para 2, ou seja, 1 para 1. Assim, 4 mols de H₂ produzem 4 mols de H₂O."
+ },
+ {
+  "seed_key": "e25",
+  "subj": "Química",
+  "grade": "ENEM",
+  "topic": "pH",
+  "level": 1,
+  "prompt": "Uma solução com pH igual a 3 é:",
+  "opts": [
+   "neutra",
+   "básica",
+   "ácida",
+   "insolúvel"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "conc",
+   null,
+   "distr"
+  ],
+  "hint": "Neutro é 7. Abaixo disso, a solução é de outro tipo.",
+  "why": "Valores de pH menores que 7 indicam solução ácida."
+ },
+ {
+  "seed_key": "e26",
+  "subj": "Química",
+  "grade": "ENEM",
+  "topic": "Separação de misturas",
+  "level": 2,
+  "prompt": "Qual processo permite recuperar a água de uma mistura de água e sal dissolvido?",
+  "opts": [
+   "filtração",
+   "destilação simples",
+   "decantação",
+   "catação"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "distr"
+  ],
+  "hint": "O sal está dissolvido, então um filtro comum não o retém.",
+  "why": "Na destilação simples a água evapora, é condensada e recolhida, e o sal fica para trás."
+ },
+ {
+  "seed_key": "e27",
+  "subj": "Biologia",
+  "grade": "ENEM",
+  "topic": "Cadeia alimentar",
+  "level": 1,
+  "prompt": "Na cadeia “capim → gafanhoto → sapo → cobra”, o gafanhoto é:",
+  "opts": [
+   "produtor",
+   "consumidor primário",
+   "consumidor secundário",
+   "decompositor"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "distr",
+   "conc"
+  ],
+  "hint": "Quem se alimenta diretamente do produtor?",
+  "why": "O gafanhoto come o capim (produtor), logo é consumidor primário. O sapo é o secundário."
+ },
+ {
+  "seed_key": "e28",
+  "subj": "Biologia",
+  "grade": "ENEM",
+  "topic": "Fotossíntese",
+  "level": 1,
+  "prompt": "Quais são, respectivamente, o gás absorvido e o gás liberado na fotossíntese?",
+  "opts": [
+   "O₂ e CO₂",
+   "CO₂ e O₂",
+   "N₂ e O₂",
+   "CO₂ e N₂"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "distr",
+   "conc"
+  ],
+  "hint": "A planta usa o gás que animais expiram.",
+  "why": "Na fotossíntese a planta absorve CO₂ e libera O₂. A opção A descreve a respiração."
+ },
+ {
+  "seed_key": "e29",
+  "subj": "Biologia",
+  "grade": "ENEM",
+  "topic": "Imunologia",
+  "level": 1,
+  "prompt": "A vacinação protege contra doenças porque:",
+  "opts": [
+   "mata os vírus presentes no corpo",
+   "estimula o corpo a produzir defesas, como anticorpos",
+   "substitui o sistema imunológico",
+   "aumenta a temperatura do corpo"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "distr"
+  ],
+  "hint": "A vacina prepara o corpo antes da doença.",
+  "why": "A vacina apresenta o agente (ou parte dele) de forma segura, e o sistema imunológico cria anticorpos e memória."
+ },
+ {
+  "seed_key": "e30",
+  "subj": "Biologia",
+  "grade": "ENEM",
+  "topic": "Genética",
+  "level": 1,
+  "prompt": "A molécula que armazena a informação genética nas células é:",
+  "opts": [
+   "RNA mensageiro",
+   "proteína",
+   "DNA",
+   "glicose"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "conc",
+   null,
+   "distr"
+  ],
+  "hint": "Ela forma os cromossomos.",
+  "why": "O DNA guarda a informação genética. O RNA mensageiro apenas leva cópias dela para a síntese de proteínas."
+ },
+ {
+  "seed_key": "e31",
+  "subj": "História",
+  "grade": "ENEM",
+  "topic": "Revolução Industrial",
+  "level": 1,
+  "prompt": "A Revolução Industrial teve início em qual país?",
+  "opts": [
+   "França",
+   "Inglaterra",
+   "Estados Unidos",
+   "Alemanha"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "conc"
+  ],
+  "hint": "Pense no país com carvão, capital e colônias no século XVIII.",
+  "why": "A Revolução Industrial começou na Inglaterra, na segunda metade do século XVIII."
+ },
+ {
+  "seed_key": "e32",
+  "subj": "História",
+  "grade": "ENEM",
+  "topic": "Brasil Império",
+  "level": 1,
+  "prompt": "A Lei Áurea, de 1888, determinou:",
+  "opts": [
+   "a proclamação da República",
+   "a abolição da escravidão no Brasil",
+   "a independência do Brasil",
+   "o voto feminino"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "conc"
+  ],
+  "hint": "Sancionada pela Princesa Isabel.",
+  "why": "A Lei Áurea extinguiu a escravidão no Brasil em 13 de maio de 1888."
+ },
+ {
+  "seed_key": "e33",
+  "subj": "História",
+  "grade": "ENEM",
+  "topic": "Era Vargas",
+  "level": 2,
+  "prompt": "A CLT (Consolidação das Leis do Trabalho), de 1943, está associada ao governo de:",
+  "opts": [
+   "Juscelino Kubitschek",
+   "Getúlio Vargas",
+   "Dom Pedro II",
+   "Fernando Henrique Cardoso"
+  ],
+  "ans": 1,
+  "err": [
+   "conc",
+   null,
+   "conc",
+   "conc"
+  ],
+  "hint": "Ela surgiu durante o Estado Novo.",
+  "why": "A CLT foi criada em 1943, no governo de Getúlio Vargas."
+ },
+ {
+  "seed_key": "e34",
+  "subj": "Geografia",
+  "grade": "ENEM",
+  "topic": "Meio ambiente",
+  "level": 1,
+  "prompt": "O aumento de gases como o CO₂, que intensifica a retenção de calor na atmosfera, está ligado ao:",
+  "opts": [
+   "fenômeno da chuva ácida",
+   "buraco na camada de ozônio",
+   "agravamento do efeito estufa",
+   "fenômeno da inversão térmica"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "conc",
+   null,
+   "conc"
+  ],
+  "hint": "Pense em aquecimento global.",
+  "why": "Gases como CO₂ e metano retêm calor e intensificam o efeito estufa. O buraco no ozônio está ligado aos CFCs."
+ },
+ {
+  "seed_key": "e35",
+  "subj": "Geografia",
+  "grade": "ENEM",
+  "topic": "Urbanização",
+  "level": 2,
+  "prompt": "Quando duas cidades vizinhas crescem tanto que suas áreas urbanas se unem, ocorre:",
+  "opts": [
+   "conurbação",
+   "êxodo rural",
+   "segregação",
+   "verticalização"
+  ],
+  "ans": 0,
+  "err": [
+   null,
+   "conc",
+   "conc",
+   "distr"
+  ],
+  "hint": "Pense em cidades que viram uma só mancha urbana.",
+  "why": "Conurbação é a junção física de áreas urbanas de cidades vizinhas, comum em regiões metropolitanas."
+ },
+ {
+  "seed_key": "e36",
+  "subj": "Geografia",
+  "grade": "ENEM",
+  "topic": "Biomas brasileiros",
+  "level": 2,
+  "prompt": "Qual bioma tem árvores de troncos retorcidos, solo ácido e é chamado de “berço das águas”?",
+  "opts": [
+   "Caatinga",
+   "Pampa",
+   "Cerrado",
+   "Mata Atlântica"
+  ],
+  "ans": 2,
+  "err": [
+   "conc",
+   "conc",
+   null,
+   "distr"
+  ],
+  "hint": "Ele guarda nascentes de grandes bacias.",
+  "why": "O Cerrado tem vegetação de troncos retorcidos e abriga nascentes de várias bacias hidrográficas."
+ }
+]

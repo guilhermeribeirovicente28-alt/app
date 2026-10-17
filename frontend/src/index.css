@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 210 29% 8%;
+        --foreground: 137 30% 95%;
+        --card: 204 8% 12%;
+        --card-foreground: 137 30% 95%;
+        --popover: 204 8% 12%;
+        --popover-foreground: 137 30% 95%;
+        --primary: 77 82% 65%;
+        --primary-foreground: 210 29% 8%;
+        --secondary: 192 6% 16%;
+        --secondary-foreground: 137 30% 95%;
+        --muted: 192 6% 16%;
+        --muted-foreground: 174 12% 69%;
+        --accent: 192 6% 16%;
+        --accent-foreground: 137 30% 95%;
+        --destructive: 11 100% 72%;
+        --destructive-foreground: 210 29% 8%;
+        --border: 180 4% 22%;
+        --input: 180 4% 22%;
+        --ring: 77 82% 65%;
+        --radius: 0.9rem;
+        --bg: #0f151b;
+        --card-1: #1b1e20;
+        --card-2: #262a2b;
+        --line: #373b3b;
+        --fg: #eef5f0;
+        --muted-fg: #a5bab8;
+        --lime: #c6ef5e;
+        --good: #8fe0a0;
+        --bad: #ff8a70;
+        --warn: #f0c166;
+        --info: #8cc4ff;
+        --calc: #c3a2ff;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        @apply bg-background text-foreground;
+        margin: 0;
+        font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    ::selection {
+        background: rgba(198, 239, 94, 0.35);
+        color: #eef5f0;
+    }
+    :focus-visible {
+        outline: 2px solid var(--lime);
+        outline-offset: 2px;
+    }
+}
+
+@layer components {
+    .font-mono-num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-variant-numeric: tabular-nums;
+    }
+    .eyebrow {
+        @apply text-[11px] font-bold uppercase tracking-[0.12em] text-[#c6ef5e];
+    }
+    .panel {
+        @apply bg-[#1b1e20] border border-[#373b3b] rounded-2xl relative overflow-hidden;
+    }
+    .btn-lime {
+        @apply bg-[#c6ef5e] text-[#0f151b] font-extrabold rounded-xl px-5 py-3 text-sm inline-flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(198,239,94,0.25)] disabled:opacity-50 disabled:cursor-not-allowed;
+        transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+    }
+    .btn-lime:hover:not(:disabled) {
+        @apply bg-[#b8e64c] shadow-[0_6px_28px_rgba(198,239,94,0.4)];
+    }
+    .btn-lime:active:not(:disabled) {
+        transform: scale(0.97);
+    }
+    .btn-soft {
+        @apply bg-[#262a2b] text-[#eef5f0] border border-[#373b3b] rounded-xl px-4 py-2.5 text-sm font-semibold inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed;
+        transition: background-color .2s ease, border-color .2s ease, transform .15s ease;
+    }
+    .btn-soft:hover:not(:disabled) {
+        @apply bg-[#373b3b];
+    }
+    .btn-soft:active:not(:disabled) {
+        transform: scale(0.97);
+    }
+    .field {
+        @apply w-full bg-[#0f151b] border border-[#373b3b] rounded-xl px-3.5 py-2.5 text-sm text-[#eef5f0] placeholder:text-[#a5bab8]/60 outline-none;
+        transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .field:focus {
+        @apply border-[#c6ef5e]/60 shadow-[0_0_0_3px_rgba(198,239,94,0.12)];
+    }
+    .chip {
+        @apply shrink-0 px-3.5 py-1.5 rounded-full border border-[#373b3b] bg-[#1b1e20] text-xs sm:text-sm font-semibold text-[#a5bab8];
+        transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .chip:hover {
+        @apply text-[#eef5f0] border-[#a5bab8]/50;
+    }
+    .chip[aria-pressed="true"] {
+        @apply bg-[#c6ef5e] text-[#0f151b] border-[#c6ef5e];
+    }
+    .no-scrollbar {
+        scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .grain::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.035;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .glow-lime {
+        box-shadow: 0 0 0 1px rgba(198, 239, 94, 0.35), 0 0 32px rgba(198, 239, 94, 0.12);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .rise {
+        animation: rise .45s cubic-bezier(.2, .7, .2, 1) both;
+    }
+    @keyframes rise {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: none; }
+    }
+    .blink-caret::after {
+        content: "▍";
+        margin-left: 2px;
+        color: var(--lime);
+        animation: caret 1s steps(2) infinite;
+    }
+    @keyframes caret {
+        50% { opacity: 0; }
+    }
+}
+
+.md { line-height: 1.65; font-size: 0.94rem; color: #e3ece6; }
+.md h1, .md h2, .md h3 { color: #eef5f0; font-weight: 800; margin: 1.1em 0 0.45em; line-height: 1.25; }
+.md h1 { font-size: 1.25rem; } .md h2 { font-size: 1.08rem; } .md h3 { font-size: 1rem; }
+.md h2:first-child, .md h1:first-child, .md h3:first-child { margin-top: 0; }
+.md p { margin: 0.5em 0; }
+.md ul, .md ol { margin: 0.5em 0; padding-left: 1.3em; }
+.md ul { list-style: disc; } .md ol { list-style: decimal; }
+.md li { margin: 0.2em 0; }
+.md li::marker { color: #c6ef5e; }
+.md strong { color: #eef5f0; font-weight: 700; }
+.md code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; background: #262a2b; padding: 0.1em 0.4em; border-radius: 6px; color: #c6ef5e; }
+.md pre { background: #0f151b; border: 1px solid #373b3b; padding: 0.8em; border-radius: 12px; overflow-x: auto; }
+.md pre code { background: transparent; padding: 0; color: #eef5f0; }
+.md blockquote { border-left: 3px solid #c6ef5e; padding-left: 0.8em; color: #a5bab8; margin: 0.6em 0; }
+.md table { width: 100%; border-collapse: collapse; margin: 0.6em 0; font-size: 0.88em; }
+.md th, .md td { border: 1px solid #373b3b; padding: 0.4em 0.6em; text-align: left; }
+.md hr { border-color: #373b3b; margin: 1em 0; }

@@ -1,0 +1,147 @@
+{
+  "project_name": "Inimigo das Provas",
+  "archetype": "THE PERFORMANCE PRO / HIGH-TECH ACADEMIC",
+  "theme": "dark",
+  "language": "pt-BR",
+  "typography": {
+    "heading_font": "Plus Jakarta Sans, sans-serif",
+    "body_font": "Plus Jakarta Sans, sans-serif",
+    "code_font": "JetBrains Mono, monospace",
+    "google_fonts_import": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');",
+    "hierarchy": {
+      "h1": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#eef5f0]",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#eef5f0]",
+      "h3": "text-xl sm:text-2xl font-semibold text-[#eef5f0]",
+      "h4": "text-lg font-semibold text-[#eef5f0]",
+      "body": "text-sm sm:text-base font-normal text-[#a5bab8] leading-relaxed",
+      "small": "text-xs sm:text-sm text-[#a5bab8]",
+      "label": "text-xs uppercase font-bold tracking-wider text-[#a5bab8]",
+      "badge": "text-xs font-semibold px-2.5 py-1 rounded-full"
+    }
+  },
+  "colors": {
+    "background": "#0f151b",
+    "card_bg_primary": "#1b1e20",
+    "card_bg_secondary": "#262a2b",
+    "border_color": "#373b3b",
+    "foreground": "#eef5f0",
+    "muted_foreground": "#a5bab8",
+    "accent_lime": "#c6ef5e",
+    "accent_lime_glow": "rgba(198, 239, 94, 0.25)",
+    "accent_lime_hover": "#b8e64c",
+    "semantic": {
+      "good_correct": "#8fe0a0",
+      "bad_error": "#ff8a70",
+      "warning_streak": "#f0c166",
+      "info_tip": "#8cc4ff",
+      "calculation": "#c3a2ff"
+    },
+    "error_type_tags": {
+      "Interpretacao": { "bg": "#8cc4ff20", "text": "#8cc4ff", "border": "#8cc4ff40" },
+      "Distracao": { "bg": "#f0c16620", "text": "#f0c166", "border": "#f0c16640" },
+      "Conceito": { "bg": "#c3a2ff20", "text": "#c3a2ff", "border": "#c3a2ff40" },
+      "Calculo": { "bg": "#ff8a7020", "text": "#ff8a70", "border": "#ff8a7040" }
+    }
+  },
+  "visual_enhancers": {
+    "card_style": "bg-[#1b1e20] border border-[#373b3b] rounded-2xl p-5 sm:p-6 shadow-xl relative overflow-hidden transition-all duration-200 hover:border-[#373b3b]/80",
+    "active_card_style": "bg-[#1b1e20] border border-[#c6ef5e]/40 shadow-[0_0_20px_rgba(198,239,94,0.15)] rounded-2xl p-5 sm:p-6",
+    "button_primary": "bg-[#c6ef5e] text-[#0f151b] font-extrabold hover:bg-[#b8e64c] transition-all shadow-[0_4px_20px_rgba(198,239,94,0.3)] active:scale-95 rounded-xl px-5 py-3 text-sm sm:text-base cursor-pointer inline-flex items-center justify-center gap-2",
+    "button_secondary": "bg-[#262a2b] text-[#eef5f0] hover:bg-[#373b3b] border border-[#373b3b] transition-all rounded-xl px-4 py-2.5 text-sm font-semibold cursor-pointer inline-flex items-center justify-center gap-2",
+    "button_ghost": "text-[#a5bab8] hover:text-[#eef5f0] hover:bg-[#262a2b] transition-all rounded-lg px-3 py-2 text-sm font-medium cursor-pointer",
+    "badge_lime": "bg-[#c6ef5e]/15 text-[#c6ef5e] border border-[#c6ef5e]/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider",
+    "progress_bar_lime": "h-2.5 rounded-full bg-[#262a2b] overflow-hidden relative",
+    "progress_fill_lime": "h-full bg-gradient-to-r from-[#8fe0a0] to-[#c6ef5e] rounded-full transition-all duration-500 shadow-[0_0_12px_rgba(198,239,94,0.5)]"
+  },
+  "layout_structure": {
+    "desktop_sidebar": "Fixed left sidebar (width 260px) with logo 'INIMIGO DAS PROVAS', current XP badge, streak count, main tabs navigation, and quick exam timer indicator. Solid dark background `#0f151b` with border-r `#373b3b`.",
+    "mobile_bottom_nav": "Fixed bottom floating navigation bar with backdrop-blur-xl bg-[#0f151b]/90 border-t border-[#373b3b] z-50 flex justify-around py-3 px-2 sm:hidden.",
+    "top_header": "Header displaying active section title, user profile / streak summary, notifications, search / filter, and quick action button. Height 64px, border-b border-[#373b3b] bg-[#0f151b]/80 backdrop-blur-md sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between.",
+    "main_container": "Responsive bento grid or single column layout with max-w-7xl mx-auto px-4 sm:px-8 py-6 pb-24 sm:pb-8",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
+  },
+  "tab_sections": {
+    "Inicio": {
+      "title": "Visão Geral & Desafios",
+      "description": "Dashboard principal com metas do dia, progresso do cronograma, streak de dias, atalhos rápidos de IA e questões pendentes."
+    },
+    "Treino": {
+      "title": "Treino Adaptativo de Questões",
+      "description": "Modo de treino com marcação de tipo de erro (Interpretação, Distração, Conceito, Cálculo), sistema de dicas progressivas, explicação detalhada e recompensa em XP."
+    },
+    "Simulado": {
+      "title": "Simulado Cronometrado",
+      "description": "Exames simulados com timer regressivo, controle de tempo por questão, modo de revisão pós-prova e relatório de desempenho."
+    },
+    "Professor": {
+      "title": "Professor IA (Tutor Claude)",
+      "description": "Chat interativo estilo Claude com tutor acadêmico personalizado para tirar dúvidas, explicar matérias complexas e resolver exercícios passo a passo."
+    },
+    "Ferramentas": {
+      "title": "Ferramentas Avançadas de Estudo",
+      "sub_tools": [
+        "Aprender (Módulos de teoria rápida e mapas mentais)",
+        "Raio-X da Prova (Análise estatística de assuntos mais cobrados no ENEM/Vestibulares)",
+        "Caça à Pegadinha (Identificador de pegadinhas clássicas de banca)",
+        "Upload de Material & Resumo por IA (Processador de PDF e imagens com extração de flashcards)",
+        "Fabricante de Provas (Gerador personalizado de listas de exercícios)",
+        "Gerador de Questões IA por Assunto e Série (Crie questões inéditas para qualquer disciplina)"
+      ]
+    },
+    "PlanoDeEstudos": {
+      "title": "Plano de Estudos & Cronograma",
+      "description": "Cronograma de metas diárias até a data da prova alvo, checklist interativo, alertas de revisão espaçada e indicador de progresso acumulado."
+    },
+    "Progresso": {
+      "title": "Estatísticas & Raio-X Pessoal",
+      "description": "Gráficos detalhados de precisão total, evolução de XP, distribuição dos tipos de erros mais frequentes, precisão por matéria e histórico de simulados."
+    }
+  },
+  "component_guidelines": {
+    "file_extension": ".js",
+    "icons_library": "lucide-react (already installed) or @phosphor-icons/react",
+    "toast_library": "sonner (located in src/components/ui/sonner.js or sonner.tsx)",
+    "chart_library": "recharts or lucide SVG custom charts",
+    "shadcn_components": "Use custom styled Shadcn primitives (Dialog, Tabs, Select, Progress, Tooltip, DropdownMenu, Checkbox, Input) styled with the dark lime theme."
+  },
+  "test_attributes": {
+    "rule": "Every button, input, tab, link, metric display, and modal MUST include data-testid with kebab-case identifier.",
+    "examples": [
+      "data-testid=\"nav-tab-inicio\"",
+      "data-testid=\"nav-tab-treino\"",
+      "data-testid=\"nav-tab-simulado\"",
+      "data-testid=\"nav-tab-professor\"",
+      "data-testid=\"nav-tab-ferramentas\"",
+      "data-testid=\"nav-tab-plano\"",
+      "data-testid=\"nav-tab-progresso\"",
+      "data-testid=\"question-option-button-a\"",
+      "data-testid=\"submit-answer-button\"",
+      "data-testid=\"error-tag-interpretacao\"",
+      "data-testid=\"ai-tutor-input-field\"",
+      "data-testid=\"ai-tutor-send-button\"",
+      "data-testid=\"user-xp-counter\"",
+      "data-testid=\"user-streak-badge\""
+    ]
+  },
+  "image_urls": [
+    {
+      "url": "https://images.pexels.com/photos/8199555/pexels-photo-8199555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Estudante focada estudando com notebook e livros na biblioteca",
+      "category": "hero_learning"
+    },
+    {
+      "url": "https://images.pexels.com/photos/4560142/pexels-photo-4560142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Estudante comemorando aprovação no exame",
+      "category": "achievement_celebration"
+    }
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Do NOT use generic light/white theme or blue SaaS colors. Keep strict adherence to dark bg #0f151b, card #1b1e20, card2 #262a2b, line #373b3b, text #eef5f0, and accent lime #c6ef5e.",
+    "Never center text globally. Align left for reading flow.",
+    "Ensure both Mobile Bottom Navigation and Desktop Sidebar Navigation function seamlessly.",
+    "All interactive elements MUST have data-testid attributes.",
+    "Ensure error tagging in Treino provides the 4 tags: Interpretação, Distração, Conceito, Cálculo.",
+    "Provide clear feedback with toast notifications using Sonner when completing tasks, answering questions, or generating IA quizzes.",
+    "Ensure all copy is in clear, engaging Brazilian Portuguese (pt-BR)."
+  ]
+}
